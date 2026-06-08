@@ -5,7 +5,7 @@
   "main": "expo-router/entry",
   "scripts": {
     "dev": "expo start --localhost",
-    "build": "expo export -p web",
+    "build": "expo export -p web --output-dir=dist",
     "build:web": "expo export -p web --output-dir=dist",
     "build:prod": "npm install --legacy-peer-deps && npm run build:web",
     "serve": "node server/serve.js",
