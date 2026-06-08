@@ -1,21 +1,22 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build:web"
+  command = "npm install --legacy-peer-deps && npx expo export -p web --output-dir=dist"
   publish = "dist"
   functions = "api"
+  node_version = "20"
 
 [dev]
   command = "npm run dev"
   port = 3000
 
 [context.production]
-  command = "npm install --legacy-peer-deps && npm run build:web"
+  command = "npm install --legacy-peer-deps && npx expo export -p web --output-dir=dist"
   environment = { NODE_ENV = "production" }
 
 [context.deploy-preview]
-  command = "npm install --legacy-peer-deps && npm run build:web"
+  command = "npm install --legacy-peer-deps && npx expo export -p web --output-dir=dist"
 
 [context.branch-deploy]
-  command = "npm install --legacy-peer-deps && npm run build:web"
+  command = "npm install --legacy-peer-deps && npx expo export -p web --output-dir=dist"
 
 [[redirects]]
   from = "/*"
